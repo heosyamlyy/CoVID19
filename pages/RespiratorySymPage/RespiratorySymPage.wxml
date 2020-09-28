@@ -1,0 +1,84 @@
+<!-- index.wxml -->
+<view class="container">
+  <image class="bkimage" src="../image/background.jpg"></image>
+  <view style="position:absolute; top:100px; background-color:white; font-size:20px">- 呼吸症状篇 -</view>
+</view>
+
+<view class="page">
+  
+  <view class="weui-form">
+  <image src="../image/ziyuan-3.png" mode ="aspectFit" class="iconImage"></image>
+    <view class="weui-form__control-area">
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells weui-cells_form">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">是否先前存在以下导致哮喘症状的慢性疾病？</view>
+          </view>
+          <view class="weui-form__text-area">
+            <view class="weui-cell__hd">
+              <label>自发性哮喘：</label>
+              <switch type="checkbox" checked="{{switch2Checked}}" bindchange="bindspontaneous_asthma" />
+            </view>
+            <view class="weui-cell__hd">
+              <label>间歇性哮喘：</label>
+              <switch type="checkbox" checked="{{switch2Checked}}" bindchange="bindintermission_asthma" />
+            </view>
+            <view class="weui-cell__hd">
+              <label>支气管扩张：</label>
+              <switch type="checkbox" checked="{{switch2Checked}}" bindchange="bindallergic_asthma" />
+            </view>
+          </view>
+          
+          <view class="weui-cell weui-cell_active">
+            <label>是否有持续咳嗽的症状?</label>
+            <switch type="checkbox" bindchange="bindCough" style="margin:10px" />
+          </view>
+          <view wx:if="{{coughRelated}}">
+            <view class="weui-cell weui-cell_active">
+              <view>请选择最初出现咳嗽的日期：{{month}}月{{day}}日</view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+              <picker-view indicator-style="height: 50px;" style="width: 100%; height: 150rpx;" value="{{value}}" bindchange="bindChange">
+                <picker-view-column>
+                  <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+                </picker-view-column>
+                <picker-view-column>
+                  <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+                </picker-view-column>
+              </picker-view>
+            </view>
+          </view>
+
+          <view wx:if="{{coughRelated}}" class="weui-cell weui-cell_active" >
+            <label>是否为干咳，无法抑制？</label>
+            <switch type="checkbox"  id = "dryCough" checked="{{switch2Checked}}" bindchange="bindDryCough" />
+          </view>
+
+          <view class="weui-cell weui-cell_active" >
+            <label>呼吸频率加快症状？</label>
+            <switch type="checkbox" bindchange="bindBreathFaster" />
+          </view>
+
+          <view wx:if="{{breathRelated}}" class="weui-cell weui-cell_active">
+            <label>呼吸困难以及急促现象？</label>
+            <switch type="checkbox"bindchange="bindBreathDifficult" />
+          </view>
+          <view wx:if="{{sleepAffected}}" class="weui-cell weui-cell_active">
+            <label>是否出现影响到睡眠的哮喘？</label>
+            <switch type="checkbox" bindchange="bindSleepAffected" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-form__tips-area">
+			<view class="weui-form__tips">
+        感谢您的配合，下面进入体温异常篇
+			</view>
+		</view>
+
+    <view class="weui-form__opr-area">
+      <button bindtap="bindTempTap" style="background-color:blue; color:white;">下一页</button>
+    </view>
+  </view>
+</view>

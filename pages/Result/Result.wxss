@@ -1,0 +1,22 @@
+/* pages/Result/Result.wxss */
+@import "../../weui/weui.wxss";
+
+.bkimage {
+  margin-top: 0px;
+  padding-top: 0px;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  width:100%;
+}
+.iconImage {
+  height: 150rpx;
+  margin: 0rpx;
+  border-radius: 10%;
+  width:100%;
+}
+.container {
+  padding: 0rpx 0;
+}
+.section_section_gap {
+  margin:40px;
+}

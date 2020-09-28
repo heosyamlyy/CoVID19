@@ -1,0 +1,10 @@
+<!-- pages/ComfirmationPage/ComfirmationPage.wxml -->
+<view class="container">
+  <image class="bkimage" src="../image/background.jpg"></image>
+  <view class="section_section_gap">
+    <text>您的预制单已生成并提交提交，我们中心的客服会在24小时内与您联系。感谢您的配合!</text>
+  </view>
+  <view>
+    <button bindtap="bindAppHead" style="background-color:blue; color:white; margin:40px">返回首页</button>
+  </view>
+</view>

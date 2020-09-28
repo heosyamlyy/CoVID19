@@ -1,0 +1,29 @@
+/* pages/VisitHistoryPage/VisitHistoryPage.wxss */
+@import "../../weui/weui.wxss";
+
+.container {
+  padding: 0rpx 0;
+}
+.iconImage {
+  height: 150rpx;
+  margin: 0rpx;
+  border-radius: 50%;
+  width:100%;
+}
+.bkimage {
+  margin-top: 0px;
+  padding-top: 0px;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  width:100%;
+}
+
+.section_section_gap {
+  margin:40px;
+}
+
+.section_between_gap {
+  background-color: #D5D5D5;
+  width: 100%;
+  height: 2px;
+}

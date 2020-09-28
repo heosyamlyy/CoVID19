@@ -1,0 +1,21 @@
+<!-- index.wxml -->
+<view class="container">
+  <view style="position:absolute; color:white"></view>
+  <image class="bkimage" src="../image/background.jpg"></image>
+  <view id="mainTitle"><b>众志成城 共抗疫情</b></view>
+  <view id="subTitle"><b>丨    群防群治 齐心协力    丨</b></view>
+  <view style="position:absolute; top:370rpx;">
+    <button bindtap="bindRSPTap" class="indexButton" style=" width: 100%">
+      <image class="userinfo-avatar" src="../image/-wireless.png" mode="cover"></image>
+      <view>AI自检辅诊小工具</view>
+    </button>
+    <button bindtap="bindAppointment" class="indexButton">
+      <image class="userinfo-avatar" src="../image/-to-do.png" mode="cover"></image>
+      <view>山灞远程会诊中心预约挂号</view>
+    </button>
+    <button bindtap="bindMask" class="indexButton">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view>医用口罩预定服务</view>
+    </button>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<!-- pages/Result/Result.wxml -->
+<!-- pages/VisitHistoryPage/VisitHistoryPage.wxml -->
+<!-- pages/TempPage/TempPage.wxml -->
+<view class="container">
+  <image class="bkimage" src="../image/background.jpg"></image>
+  <view style="position:absolute; top:100px; background-color:white; font-size:20px">-  AI结论篇  -</view>
+</view>
+
+<view class="page">
+  <view class="weui-form">
+    <view class="weui-form__text-area">
+      <label>以下是您的病情预判筛查结果，此结果为AI预判，若想获取可靠的最终诊断还需到医院进行专业诊断</label>
+    </view>
+    <view>
+      <image src="{{imgSrc}}" mode="aspectFit" class=".iconImage"></image>
+    </view>
+    <view class="weui-form__text-area">
+      <h2 class="section__title">AI预判筛查结果：</h2>
+      <view class="body-view">{{aIResult}}</view>
+      <view>{{aIDiagnosis}}</view>
+    </view>
+
+    <view style="max-width: 100%; margin-left: auto; margin-right: auto;">
+      <image src="../image/sunpa.jpg"  mode="aspectFit" ></image>
+    </view>
+
+    <view class="weui-form__tips-area">
+      <view class="weui-form__tips">山灞远程医疗服务中心</view>
+      <view class="weui-form__tips">挂号预约热线电话：0871-8321644</view>
+    </view>
+
+    <view class="weui-form__opr-area">
+      <button bindtap="bindAppHead" style="background-color:blue; color:white;">返回首页</button>
+    </view>
+
+    <view class="weui-form__opr-area">
+      <button bindtap="bindAppointment" style="background-color:blue; color:white;">在线预约挂号链接</button>
+    </view>
+  </view>
+</view>
